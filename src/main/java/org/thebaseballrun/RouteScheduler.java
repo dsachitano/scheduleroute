@@ -5,12 +5,13 @@ import org.joda.time.DateTime;
 import org.json.simple.JSONObject;
 
 import java.util.List;
+import java.util.Set;
 
 public interface RouteScheduler {
 
     // Load Data
-    public int loadRouteLocations(JSONObject points);
-    public int loadRouteLocations(List<RouteLocation> points);
+    public int loadRouteNodes(JSONObject points);
+    public int loadRouteNodes(Set<GameDay> points);
 
     public int loadSchedule(JSONObject schedule);
     public int loadSchedule(List<GameDay> schedule);
